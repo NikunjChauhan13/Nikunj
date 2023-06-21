@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <br /><br /><br />
+  <body style="text-align: center">
+    <style>
+      body {
+        background: #000;
+      }
+      #time {
+        background: yellow;
+        color: black;
+      }
+      #Dev {
+        background-color: blue;
+        color: aliceblue;
+      }
+      #date {
+        background-color: red;
+        color: aliceblue;
+      }
+    </style>
+    <button onclick="myFunction()">Click Me</button>
+    <p id="Dev"></p>
+    <p id="date"></p>
+    <p id="time"></p>
+    <script>
+      function myFunction() {
+        var d = new Date();
+        var x = "Developed By VGR";
+        document.getElementById("Dev").innerHTML = x;
+        document.getElementById("date").innerHTML = d;
+        setInterval(() => {
+          var t = new Date().toLocaleTimeString();
+          document.getElementById("time").innerHTML = t;
+        }, 1000);
+      }
+      //(function () {
+      //  setInterval(() => {
+      //    var t = new Date().toLocaleTimeString();
+      //    //console.log(new Date().toLocaleString());
+      //    document.getElementById("time").innerHTML = t;
+      //  }, 1000);
+      //})();
+    </script>
+  </body>
+</html>
